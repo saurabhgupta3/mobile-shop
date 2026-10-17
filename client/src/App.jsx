@@ -1,9 +1,16 @@
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Home from "./pages/Home";
+import CreateMobile from "./pages/CreateMobile";
+
 import "./App.css";
 
 export default function App() {
     return (
-        <div className="app">
-            hello
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/create-mobile" element={<CreateMobile/>}/>
+            </Routes>
+        </BrowserRouter>
     )
 }
